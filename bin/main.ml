@@ -1,36 +1,3 @@
-(* let square grid x y = 
-  let min_x = (x / 3) * 3 in 
-  let min_y = (y / 3) * 3 in 
-  let arr = Array.init 3 (fun _ -> Array.make 3 0) in
-  let y_index = ref 0 in 
-  (*rows*)
-  for y_pos = min_y to min_y + 2 do 
-    (*columns*)
-    let x_index = ref 0 in 
-    for x_pos = min_x to min_x + 2 do 
-      arr.(!y_index).(!x_index) <- grid.(y_pos).(x_pos);
-      x_index := !x_index + 1 
-    done;
-    y_index := !y_index + 1 
-  done;
-  arr
-
-  
-
-let squares grid = 
-  let sub_arr = Array.init 3 (fun _ -> Array.make 3 0) in
-  let arr = Array.init 9 (fun _ -> sub_arr) in 
-  let index = ref 0 in
-  for y = 0 to 2 do 
-    for x = 0 to 2 do 
-      let res = square grid (x * 3) (y*3) in 
-      arr.(!index) <- res; 
-      index := !index + 1;  
-    done;
-  done;
-  arr *)
-
-
 let is_valid grid row col num = 
   (*check if the number exists in the row*)
   let row_ok = 
